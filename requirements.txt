@@ -2,4 +2,5 @@ alpaca-py
 pandas
 python-dotenv
 flask
+requests
 pytz
