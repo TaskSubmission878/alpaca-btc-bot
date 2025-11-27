@@ -1,6 +1,5 @@
-alpaca-py>=3.0.0
+alpaca-py
 pandas
 python-dotenv
 flask
 pytz
-requests
