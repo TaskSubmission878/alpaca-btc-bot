@@ -190,7 +190,8 @@ def run_strategy():
         try:
             ltf = get_bars(ENTRY_TF, 200)
             htf = get_bars(HTF_TF, 100)
-            if not ltf or len(ltf)<50 or not htf: time.sleep(5); continue
+            if ltf is None or htf is None or len(ltf) < 50 or len(htf) < 10: 
+                time.sleep(5); continue
             if ltf['time'].iloc[-1] == last_bar_time: time.sleep(1); continue
             last_bar_time = ltf['time'].iloc[-1]
             if last_trade_day != last_bar_time.date(): trades_today = cooldown = 0; last_trade_day = last_bar_time.date()
