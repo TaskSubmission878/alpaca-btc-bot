@@ -2,8 +2,6 @@ services:
   - type: web
     name: alpaca-btc-bot
     env: python
-    region: oregon
-    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
     envVars:
